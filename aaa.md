@@ -29,3 +29,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 모델링(스키마정의)
 데이터 타입과 데이터 구조 정의 
+
+시간,언어 설정 settings.py 
+실제 데이터베이스는 표준시 출력은 설정한대로 
+```python
+# Internationalization 국제화 설정하는 공간
+# https://docs.djangoproject.com/en/5.0/topics/i18n/
+
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
+
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/seoul'
+
+USE_I18N = True
+
+USE_TZ = True
+```
