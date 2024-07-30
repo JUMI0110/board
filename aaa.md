@@ -50,3 +50,13 @@ USE_TZ = True
 html에서 사용할 때 
 url -> 'app_name(여러 app_name이 있을 때 html이 찾기 쉬움):name' 매칭되는 경로를 찾아서 문자열(경로의 이름) 생성하여 적용
 {% url 'articles:index' %}
+
+
+
+# POST
+유저의 데이터로 데이터베이스를 조작함에 검증되지 않으면 위험하기에 crsf_token값으로 검증 
+
+데이터베이스 변경이 일어나는 것 CUD - 저장, 수정, 삭제 -> post
+데이터베이스 변경 일어나지 않는 것 R - 조회 -> get
+
+restful : url에 동사 넣지 않는 api django에서는 어려움

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<!-- method="POST" 데이터를 담아서 보내는 메소드 -->
+<form action="{% url 'articles:update' id=article.id %}" method="POST">
+    <!-- method를 POST로 바꿔서 csrf_token 넣어줘야함 없으면 에러 -->
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" class="form-control" name="title", value="{{article.title}}">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea id="content" class="form-control" rows="10" name="content">{{article.content}}</textarea>
+        <!-- textarea 여러줄의 데이터 rows=세로줄 -->
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+</form>
+{% endblock %}
