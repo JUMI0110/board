@@ -27,8 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
             경로(settings.py위치기준).부모.부모(상위폴더)
 
 
-모델링(스키마정의)
-데이터 타입과 데이터 구조 정의 
+모델링(스키마정의)   
+데이터 타입과 데이터 구조 정의  -> 규칙 설정
+
 
 시간,언어 설정 settings.py 
 실제 데이터베이스는 표준시 출력은 설정한대로 
@@ -46,3 +47,6 @@ USE_I18N = True
 
 USE_TZ = True
 ```
+html에서 사용할 때 
+url -> 'app_name(여러 app_name이 있을 때 html이 찾기 쉬움):name' 매칭되는 경로를 찾아서 문자열(경로의 이름) 생성하여 적용
+{% url 'articles:index' %}
