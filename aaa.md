@@ -25,3 +25,7 @@ settings.py Tempaltes 'DIRS': [BASE_DIR(최상위폴더) / 'templates']
 
 BASE_DIR = Path(__file__).resolve().parent.parent
             경로(settings.py위치기준).부모.부모(상위폴더)
+
+
+모델링(스키마정의)
+데이터 타입과 데이터 구조 정의 
